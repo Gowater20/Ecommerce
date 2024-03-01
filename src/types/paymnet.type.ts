@@ -1,6 +1,6 @@
-import { ICard } from "./card.type";
+import { Schema } from "mongoose";
 
 export interface IPayment {
   id: string;
-  card: ICard;
+  card: Schema.Types.ObjectId;
 }

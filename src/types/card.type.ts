@@ -1,7 +1,10 @@
+// import { IUser } from "./user.type";
+import Schema from "mongoose";
+
 export interface ICard {
   id: string;
-  name: string;
-  surname: string;
+  name: Schema.Types.ObjectId;
+  surname: Schema.Types.ObjectId;
   type: string;
   pan: number;
   cvc: number;
