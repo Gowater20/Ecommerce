@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema<IUser>(
       ref: "Card",
       required: false,
     },
+    cart: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Cart",
+      required: true,
+    },
     address: {
       type: String,
       required: false,
