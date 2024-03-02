@@ -4,7 +4,7 @@ import {
   deletedLineKart,
   showLineKart,
   updateLineKart,
-} from "../controllers/linekart.controller";
+} from "../controllers/linekarts.controller";
 
 export const router = Router();
 

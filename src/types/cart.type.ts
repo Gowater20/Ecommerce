@@ -1,6 +1,6 @@
-import { ILineKart } from "./line_kart.type";
+import { Schema } from "mongoose";
 
 export interface ICart {
   id: string;
-  line_kart: ILineKart;
+  line_kart: Schema.Types.ObjectId;
 }

@@ -1,12 +1,14 @@
 import { Request, Response } from "express";
+import { User } from "../models/user.model";
 import {
-  showCards,
+  // showCards,
   showCardById,
   addNewCard,
   deleteCard,
   updateCard,
-} from "../services/card.service";
+} from "../services/cards.service";
 
+/*
 export const showCardsHandler = async (req: Request, res: Response) => {
   const cards = await showCards();
   try {
@@ -15,6 +17,7 @@ export const showCardsHandler = async (req: Request, res: Response) => {
     res.status(500).json(error);
   }
 };
+*/
 
 export const showCardByIdHandler = async (req: Request, res: Response) => {
   const card = await showCardById(req.params.id);

@@ -5,13 +5,13 @@ const cardSchema = new mongoose.Schema<ICard>(
   {
     name: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Names",
+      ref: "User",
       required: true,
     },
 
     surname: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Names",
+      ref: "User",
       required: true,
     },
 

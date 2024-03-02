@@ -1,8 +1,8 @@
-import { IProduct } from "./product.type";
+import { Schema } from "mongoose";
 
 export interface ILineKart {
   id: string;
-  product: IProduct;
+  product: Schema.Types.ObjectId;
   quantity: number;
   price: number;
   discount: number;
