@@ -5,7 +5,8 @@ import { Product } from "./product.model";
 const lineKartSchema = new mongoose.Schema<ILineKart>(
   {
     product: {
-      type: Product,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: Product,
       required: true,
     },
 
