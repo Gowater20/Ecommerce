@@ -1,21 +1,25 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 import { IOrder } from "../types/order.type";
 import { Cart } from "./cart.model";
 import { User } from "./user.model";
+import { Card } from "./card.model";
 
 const orderSchema = new mongoose.Schema<IOrder>({
   user: {
-    type: User,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: User,
     required: true,
   },
 
   cart: {
-    type: Cart,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: Cart,
     required: true,
   },
 
   card: {
-    type: Number,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: Card,
     required: true,
   },
 
@@ -29,3 +33,5 @@ const orderSchema = new mongoose.Schema<IOrder>({
     required: true,
   },
 });
+
+export const Order = mongoose.model("Order", orderSchema);
