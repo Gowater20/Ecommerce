@@ -1,4 +1,4 @@
-import { ICard } from "../types/card.type";
+import { ICard } from "../types/cards.type";
 import { Card } from "../models/card.model";
 
 /*
