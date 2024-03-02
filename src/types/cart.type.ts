@@ -1,6 +1,6 @@
-import { ILineKart } from "./line_kart.type";
+import { ILineKart } from "./linekart.type";
 
 export interface ICart {
-  id: string;
-  line_kart: ILineKart;
+	id: string;
+	line_kart: ILineKart;
 }

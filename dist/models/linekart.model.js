@@ -3,19 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Product = void 0;
+exports.LineKart = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-const productSchema = new mongoose_1.default.Schema({
-    category: {
-        type: String,
-        required: true,
-    },
-    name: {
-        type: String,
-        required: true,
-    },
-    brand: {
-        type: String,
+const LineKartSchema = new mongoose_1.default.Schema({
+    product: {
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: "product",
         required: true,
     },
     quantity: {
@@ -26,9 +19,9 @@ const productSchema = new mongoose_1.default.Schema({
         type: Number,
         required: true,
     },
-    sale: {
+    disount: {
         type: Number,
         required: true,
     },
 }, { timestamps: true });
-exports.Product = mongoose_1.default.model("Product", productSchema);
+exports.LineKart = mongoose_1.default.model("LineKart", LineKartSchema);
