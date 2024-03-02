@@ -5,7 +5,7 @@ import {
   showCardByIdHandler,
   // showCardsHandler,
   updateCardHandler,
-} from "../controllers/card.controllers";
+} from "../controllers/cards.controllers";
 
 export const router = Router();
 

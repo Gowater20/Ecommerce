@@ -4,13 +4,11 @@ import { IUser } from "../types/user.type";
 const userSchema = new mongoose.Schema<IUser>(
   {
     name: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Names",
+      type: String,
       required: true,
     },
     surname: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Names",
+      type: String,
       required: true,
     },
     card: {
