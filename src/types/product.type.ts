@@ -1,11 +1,9 @@
-import { ICategory } from "./category.type";
-
+import { Schema } from "mongoose";
 export interface IProduct {
-  id: string;
-  category: ICategory;
-  name: string;
-  quantity: number;
-  price: number;
-  brand: string;
-  sale: number;
+	category: Schema.Types.ObjectId;
+	name: String;
+	brand: String;
+	quantity: number;
+	price: number;
+	sale: number;
 }

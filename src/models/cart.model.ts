@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { ICart } from "../types/cart.type";
-import { LineKart } from "./line_kart.model";
+import { LineKart } from "./linekart.model";
 
 const cartSchema = new mongoose.Schema<ICart>(
   {
@@ -11,7 +11,7 @@ const cartSchema = new mongoose.Schema<ICart>(
     },
   },
 
-  { timestamps: true }
+	{ timestamps: true }
 );
 
 export const Cart = mongoose.model("Cart", cartSchema);
