@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import app from "./app";
 
-const CONNECTION_URL: string = "mongodb://localhost:27017/eCommerce";
+const CONNECTION_URL: string = "mongodb://localhost:27017/Ecommerce";
 const PORT = 3000;
 
 mongoose
