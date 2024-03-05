@@ -7,6 +7,20 @@ const userSchema = new mongoose.Schema<IUser>(
       type: String,
       required: true,
     },
+    surname: {
+      type: String,
+      required: true,
+    },
+    card: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Card",
+      required: false,
+    },
+    cart: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Cart",
+      required: true,
+    },
     address: {
       type: String,
       required: false,

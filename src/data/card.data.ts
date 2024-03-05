@@ -1,6 +1,7 @@
-import { ICard } from "../types/card.type";
+import { ICard } from "../types/cards.type";
 
-export const cards: ICard []= [{
+export const cards: ICard[] = [
+  {
     id: "123456789",
     name: "Mario",
     surname: "Rossi",
@@ -8,8 +9,8 @@ export const cards: ICard []= [{
     pan: 1234567890123456,
     cvc: 123,
     expire: new Date("2023-12-31"),
-},
-{
+  },
+  {
     id: "987654321",
     name: "Anna",
     surname: "Verdi",
@@ -17,8 +18,8 @@ export const cards: ICard []= [{
     pan: 9876543210987654,
     cvc: 456,
     expire: new Date("2024-10-15"),
-},
-{
+  },
+  {
     id: "565464",
     name: "Anna",
     surname: "rossi",
@@ -26,4 +27,5 @@ export const cards: ICard []= [{
     pan: 9876543210987654,
     cvc: 456,
     expire: new Date("2024-10-15"),
-}];
+  },
+];
