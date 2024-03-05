@@ -1,31 +1,33 @@
 import mongoose from "mongoose";
-import { ICard } from "../types/card.type";
+import { ICard } from "../types/cards.type";
 
 const cardSchema = new mongoose.Schema<ICard>(
   {
     name: {
-      type: String,
-      require: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
 
     surname: {
-      type: String,
-      require: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
 
     pan: {
       type: Number,
-      require: true,
+      required: true,
     },
 
     cvc: {
       type: Number,
-      require: true,
+      required: true,
     },
 
     expire: {
       type: Date,
-      require: true,
+      required: true,
     },
   },
 

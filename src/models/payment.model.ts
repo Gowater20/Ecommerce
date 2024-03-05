@@ -5,7 +5,8 @@ import { IPayment } from "../types/paymnet.type";
 const paymentSchema = new mongoose.Schema<IPayment>(
   {
     card: {
-      type: Card,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: Card,
       required: true,
     },
   },
