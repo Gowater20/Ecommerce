@@ -7,6 +7,7 @@ import { router as cardsApi } from "./routes/cards.route";
 import { router as cartApi } from "./routes/cart.route";
 import { router as ordersApi } from "./routes/orders.route";
 import { router as paymentsApi } from "./routes/payments.route";
+import { router as outhApi} from "./routes/auth.route"
 
 const app = express();
 app.use(express.json());
@@ -24,7 +25,6 @@ app.use("/cards", cardsApi);
 app.use("/carts", cartApi);
 app.use("/orders", ordersApi);
 app.use("/payments", paymentsApi);
-app.use("/signIn", newRegisterApi);
-//app.use("/login",);
+app.use("/outh", outhApi);
 
 export default app;

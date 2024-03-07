@@ -37,7 +37,7 @@ export const Login = async (req: Request, res: Response) => {
 	}
 
 	try {
-		const token = createSecretToken(userByEmail.id, 30);
+		const token = createSecretToken(userByEmail.id!, 30);
 		return res.status(200).json({ user: userByEmail, token });
 	} catch (error: any) {
 		res.status(500).json({ error: error.message });

@@ -3,13 +3,13 @@ import {
     addNewUserHandler, 
     deleteUserHandler, 
     showUserByIdHandler, 
-    showUserHandler, 
-    updateUserHandler 
+    updateUserHandler, 
+    showUsersHandler
 } from "../controllers/users.controllers";
 
 export const router = Router();
 
-router.get("/", showUserHandler)
+router.get("/", showUsersHandler)
 router.get("/:id", showUserByIdHandler)
 router.post("/", addNewUserHandler)
 router.delete("/:id", deleteUserHandler)
