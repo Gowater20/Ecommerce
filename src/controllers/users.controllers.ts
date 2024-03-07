@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import {
-  addNewUser,
+  createNewUser,
   deleteUser,
   showUserById,
   showUsers,
@@ -28,12 +28,8 @@ export const showUserByIdHandler = async (req: Request, res: Response) => {
   }
 };
 
-// questa sarà una nuova registrazione (signIn)
 export const addNewUserHandler = async (req: Request, res: Response) => {
-  const newUser = await addNewUser(req.body);
-  //inserire middleware per controllare se la mail è presente;
-  // se si, passare al login;
-  // se no, fai nuova registrazione
+  const newUser = await createNewUser(req.body);
   try {
     res.status(200).json({ message: "new user added", newUser });
   } catch (error) {
