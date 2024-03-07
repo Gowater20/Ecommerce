@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  addNewOrderHandler,
   deleteOrderHandler,
   showOrderHandler,
   updateOrderHandler,
@@ -8,5 +9,6 @@ import {
 export const router = Router();
 
 router.get("/", showOrderHandler);
+router.post("/", addNewOrderHandler)
 router.patch("/:id", updateOrderHandler);
 router.delete("/:id", deleteOrderHandler);
