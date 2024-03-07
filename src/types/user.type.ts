@@ -4,8 +4,8 @@ export interface IUser {
   id: string;
   name: String;
   surname: String;
-  card: Schema.Types.ObjectId;
-  cart: Schema.Types.ObjectId;
+  card?: Schema.Types.ObjectId;
+  cart?: Schema.Types.ObjectId;
   address: string;
   date: string;
   email: string;

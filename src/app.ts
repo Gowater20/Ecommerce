@@ -24,5 +24,7 @@ app.use("/cards", cardsApi);
 app.use("/carts", cartApi);
 app.use("/orders", ordersApi);
 app.use("/payments", paymentsApi);
+app.use("/signIn", newRegisterApi);
+//app.use("/login",);
 
 export default app;
