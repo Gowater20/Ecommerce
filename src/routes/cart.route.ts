@@ -4,7 +4,9 @@ import { deleteAllLineKartHandler,
         updateLineKartHandler 
         } from "../controllers/cart.controllers";
         
-import { router } from "./users.route";
+import { Router } from "express";
+
+export const router = Router();
 
 router.get("/", showCartHandler)
 router.delete("/:id", deleteLineKartHandler)

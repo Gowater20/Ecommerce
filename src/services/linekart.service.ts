@@ -1,5 +1,5 @@
-import { ILineKart } from "../types/line_kart.type";
-import { LineKart } from "../models/line_kart.model";
+import { ILineKart } from "../types/linekart.type";
+import { LineKart } from "../models/linekart.model";
 
 export const lineKartShow = async (): Promise<ILineKart[]> => {
   return await LineKart.find();
