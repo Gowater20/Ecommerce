@@ -8,7 +8,8 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const linekart_model_1 = require("./linekart.model");
 const cartSchema = new mongoose_1.default.Schema({
     line_kart: {
-        type: linekart_model_1.LineKart,
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: linekart_model_1.LineKart,
         required: true,
     },
 }, { timestamps: true });

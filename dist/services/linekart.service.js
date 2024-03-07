@@ -10,20 +10,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.linekartUpdate = exports.linekartdeleted = exports.linekartAdd = exports.lineKartShow = void 0;
-const linekart_model_1 = require("../models/linekart.model");
+const line_kart_model_1 = require("../models/line_kart.model");
 const lineKartShow = () => __awaiter(void 0, void 0, void 0, function* () {
-    return yield linekart_model_1.LineKart.find();
+    return yield line_kart_model_1.LineKart.find();
 });
 exports.lineKartShow = lineKartShow;
 const linekartAdd = (linekart) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield linekart_model_1.LineKart.create(linekart);
+    return yield line_kart_model_1.LineKart.create(linekart);
 });
 exports.linekartAdd = linekartAdd;
 const linekartdeleted = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield linekart_model_1.LineKart.findByIdAndDelete(id);
+    return yield line_kart_model_1.LineKart.findByIdAndDelete(id);
 });
 exports.linekartdeleted = linekartdeleted;
 const linekartUpdate = (id, body) => __awaiter(void 0, void 0, void 0, function* () {
-    return yield linekart_model_1.LineKart.findByIdAndUpdate(id, body, { new: true });
+    return yield line_kart_model_1.LineKart.findByIdAndUpdate(id, body, { new: true });
 });
 exports.linekartUpdate = linekartUpdate;

@@ -10,6 +10,20 @@ const userSchema = new mongoose_1.default.Schema({
         type: String,
         required: true,
     },
+    surname: {
+        type: String,
+        required: true,
+    },
+    card: {
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: "Card",
+        required: false,
+    },
+    cart: {
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: "Cart",
+        required: true,
+    },
     address: {
         type: String,
         required: false,

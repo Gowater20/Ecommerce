@@ -23,8 +23,8 @@ app.use("/products", productsApi);
 app.use("/linekarts", linekartsApi);
 app.use("/categories", categoryApi)
 app.use("/cards", cardsApi)
-app.use("/cart", cartApi)
-app.use("/orders", ordersApi)
-app.use("/payments", paymentsApi)
+//app.use("/cart", cartApi)
+//app.use("/orders", ordersApi)
+//app.use("/payments", paymentsApi)
 
 export default app;

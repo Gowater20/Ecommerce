@@ -8,7 +8,8 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const card_model_1 = require("./card.model");
 const paymentSchema = new mongoose_1.default.Schema({
     card: {
-        type: card_model_1.Card,
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: card_model_1.Card,
         required: true,
     },
 }, { timestamps: true });

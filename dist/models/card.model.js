@@ -7,24 +7,26 @@ exports.Card = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const cardSchema = new mongoose_1.default.Schema({
     name: {
-        type: String,
-        require: true,
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
     },
     surname: {
-        type: String,
-        require: true,
+        type: mongoose_1.default.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
     },
     pan: {
         type: Number,
-        require: true,
+        required: true,
     },
     cvc: {
         type: Number,
-        require: true,
+        required: true,
     },
     expire: {
         type: Date,
-        require: true,
+        required: true,
     },
 }, { timestamps: true });
 exports.Card = mongoose_1.default.model("Card", cardSchema);
