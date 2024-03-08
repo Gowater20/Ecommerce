@@ -1,5 +1,4 @@
 import { Schema } from "mongoose";
-// import { INameSurname } from "./name_surname.type"; ??
 export interface IUser {
   id: string;
   name: String;
